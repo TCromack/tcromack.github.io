@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tyler Cromack | Fantasy Football </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tyler Cromack's Personal Website"/>
+  <meta name="keyword" content="Tyler, Cromack, Software, Developer, Engineer, Chicopee, Springfield, Massachusetts, NFL, Portfolio, Projects, Fantasy Football"/>
+  <link rel="stylesheet" href= "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+  <link href="csstemplate.css" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Source+Code+Pro:400,900|Source+Sans+Pro:300,900|Open+Sans|Roboto&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous"/>
+  <script src="syntaxhighlighter.js" type="text/Javascript" ></script>
+</head>
+<body class ="Project--body">
+
+<!-- Main Nav -->
+<header>
+	<div class="container">
+	<h1 class="logo"><img class="header__logo" src="images/TylerLogoALTShadow.png" alt="Tyler Cromack Logo"></h1>
+	<button class="menu-toggle" role="button">
+        <div class="hamburger"></div>
+      </button>
+	<nav class="site-nav">
+		<ul>
+			<li><a href="index.html"><i class="fa fa-home site-nav--icon"></i>Home</a></li>
+			<li><a href="projects.html"><i class="fas fa-folder site-nav--icon"></i>Projects</a></li>
+			<li><a href="resume.html"><i class="fas fa-file site-nav--icon"></i>Resume</a></li>
+			<li><a href="Contact.html"><i class="fas fa-id-badge site-nav--icon"></i>Contact Me</a></li>
+		</ul>
+	</nav>
+	
+</div>
+</header>
+
+<!-- Side Bar -->
+
+<div class="sidenav">
+	<li class="side__item"></li><a class="side__link" href="https://www.linkedin.com/in/tylercromack" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+	<li class="side__item"><a class="side__link" href="https://github.com/TCromack" target="_blank" rel="noopener"><i class="fab fa-github-square"></i></a></li>
+	<li class="side__item"></li><a class="side__link" id="email" href="Contact.html"><i class="fas fa-envelope"></i></a></li>
+  </div>
+
+<!-- Project -->
+
+<div class="Title-card" id="football">
+	
+	
+	<h1 class="card-title">Fantasy Football Website</h1>
+	<p class="card-subtitle">A web database of fantasy football stats</p>
+		
+</div>
+
+<div class="Project-card">
+	
+	<div class="flexed"><h1 class="Project-title">About this project</h1><a href="http://citelms.net/Classes/Database/2019Fall/Tyler/V_PlayersWithStats" class="btn" target="_blank" rel="noopener">View Project</a></div>
+	<hr class="hrDiv--black"></hr>
+	<p class="Project-content"><p class="Project-Desc">This project was my final for my Database Design and Management course. I set out with the goal of creating a database of Fantasy Football statistics that was able to be searched and sorted through by player name or by player position. The project started using MySQL to create 2 related tables Players and Stats. The Players table contains their name, position, team, and the primary key playerid. The Stats table contains stats such as points, receptions, passing yards, etc. as well as its primary statsid and the foreign key playerid to join the tables later on.</p>
+	<p class="Project-Desc">At this stage with my tables set and my data ready to be used it was time to move to my ASP.NET MVC Web Application. I created a SQL Server Database within the project then created a new query to get my Tables from the MySQL portion of the project. At this point I could have left the project as is and moved onto generating the models but I wanted the Tables to be Views and not able to be edited by the user so I generated the Views using SQL.</p>
+		<p class="Project-Desc"><script type="text/syntaxhighlighter" class="brush: sql; gutter: false"><![CDATA[VIEW [dbo].[V_PlayersWithStats] AS SELECT P.position, P.lastName, P.team, S.pointsScored, S.passingTDs...... FROM [player] P INNER JOIN stats S ON P.playerId = s.Player_playerId.]]></script> </p>
+		<p class="Project-Desc">
+				I then generated Entity Framework Models from the Views and Tables allowing me to add in the Controllers and Views from MVC in order to use within my Web Application. I wanted the Web Application to be sortable by position and player name so I decided to use Javascript and Bootstrap to accomplish this. I created the name filter for the players first and last name by going into the player table and finding the corresponding name searched and hiding the rest. The position sorting was made easy with bootstrap by creating a button and then inside the MVC View creating positional options for the user to sort by using the button.
+			</p>
+
+			<p class="Project-Desc">
+				The final step was to deploy the Web Application and Database. Using MS SQL I created a Query to bring in my Database for the Web Application to use and linked the Database within the project. I then published the Web Application to my schools website which you can see in action by clicking the View Project button above!
+			</p>
+	</p>
+	
+</div>
+
+
+<aside class="Tech" id="footballSide">
+	<h1 class="Tech-title">Technology</h1>
+	<hr></hr>
+	<p class="Tech-list">ASP.NET MVC</p>
+	<p class="Tech-list">SQL</p>
+	<p class="Tech-list">MySQL</p>
+	<p class="Tech-list">MS SQL</p>
+	<p class="Tech-list">Javascript</p>
+	<p class="Tech-list">Bootstrap</p>
+</aside>
+  
+
+	<script src="index.js"></script>
+
+<!-- footer -->
+	<footer class="footer">
+		
+		<ul class="sociallist">
+			<li class="sociallist__item"><a href="Contact.html" class="footer__link">Designed by Tyler Cromack</a></li>
+			<li class="sociallist__item"><a class="sociallist__link" href="https://www.linkedin.com/in/tylercromack" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+			<li class="sociallist__item"><a class="sociallist__link" href="https://github.com/TCromack" target="_blank" rel="noopener"><i class="fab fa-github-square"></i></a></li>
+		</ul>
+	</footer>
+</body>
+
+</html>

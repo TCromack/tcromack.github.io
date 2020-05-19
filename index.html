@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tyler Cromack | Developer </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tyler Cromack's Personal Website"/>
+  <meta name="keyword" content="Tyler, Cromack, Software, Developer, Engineer, Chicopee, Springfield, Massachusetts, Portfolio, Projects"/>
+  <link rel="stylesheet" href= "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+  <link href="csstemplate.css" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Source+Code+Pro:400,900|Source+Sans+Pro:300,900|Open+Sans|Roboto&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous"/>
+</head>
+<body>
+
+<!-- Main Nav -->
+<header>
+	<div class="container">
+	<h1 class="logo"><img class="header__logo" src="images/TylerLogoALTShadow.png" alt="Tyler Cromack Logo"></h1>
+	<button class="menu-toggle" role="button">
+        <div class="hamburger"></div>
+      </button>
+	<nav class="site-nav">
+		<ul>
+			<li><a href="index.html"><i class="fa fa-home site-nav--icon"></i>Home</a></li>
+			<li><a href="projects.html"><i class="fas fa-folder site-nav--icon"></i>Projects</a></li>
+			<li><a href="resume.html"><i class="fas fa-file site-nav--icon"></i>Resume</a></li>
+			<li><a href="Contact.html"><i class="fas fa-id-badge site-nav--icon"></i>Contact Me</a></li>
+		</ul>
+	</nav>
+	
+</div>
+</header>
+
+<!-- Side Bar -->
+
+<div class="sidenav">
+	<li class="side__item"></li><a class="side__link" href="https://www.linkedin.com/in/tylercromack" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+	<li class="side__item"><a class="side__link" href="https://github.com/TCromack" target="_blank" rel="noopener"><i class="fab fa-github-square"></i></a></li>
+	<li class="side__item"></li><a class="side__link" id="email" href="Contact.html"><i class="fas fa-envelope"></i></a></li>
+  </div>
+
+
+
+<!-- Introduction -->
+
+<section class="intro" id="home">
+	<h1 class="section__title section__title--intro">Hi, I am <strong>TYLER CROMACK</strong></h1>
+	<p class="section__subtitle section__subtitle--intro">Software Developer</p>
+	<img class="intro__img" src="images/TylerLogoALT.png" alt="Tyler Cromack Logo">
+</section>
+
+<!-- Recent Projects-->
+<section class="recentprojects" id="recentprojects">
+	<h2 class="section__title section__title--recentprojects">Recent Projects</h2>
+	<div class="projects">
+		
+		<div class="project">
+			<h4>Spell Checker</h4>
+			<a href="SpellCheck.html">
+			<img class="recent__img" src="images/spellcheck.jpg" alt="Spell Checker Picture">
+			</a>
+			<p>For this project I had to create a Spell Checking program using Java. I used a scanner to load in the text to be checked as well as load in the dictionary containing the properly spelled words. I created an Iterable Interface in order to manipulate the dictionary such as add, remove and perform checks as well as lookups on the dictionary later on in the program. I then created an Abstract List to help implement my Interface inside the project.</p>
+		</div> <!-- project -->
+
+		<div class="project">
+			<h4>Fantasy Football Database</h4>
+			<a href="NFL.html">
+			<img class="recent__img" src="images/footballsite.PNG" alt="Football Website Picture">
+			</a>
+			<p>This project was my final for my Database Design and Management course. I set out with the goal of creating a database of Fantasy Football statistics that was able to be searched and sorted through by player name or by player position. The project started using MySQL to create 2 related tables Players and Stats. The Players table contains their name, position, team, and the primary key playerid. The Stats table contains stats such as points, receptions, passing yards, etc. as well as its primary statsid and the foreign key playerid to join the tables later on.</p>
+		</div> <!-- project -->
+
+		<div class="project">
+			<h4>NHL Stats Analysis</h4>
+			<a href="NHL.html">
+				<img class="recent__img" src="images/hockey.jpg" alt="NHL Skaters">
+			</a>
+			
+			<p>This project I set out to answer three questions using NHL player statistics.
+
+				Are younger players penalized more than older players? Surprisingly I found that on average younger players take less penalty minutes on average than older players. I think most people have the belief that on average younger players are less disciplined than older players due to lack of experience but when we take a more in depth look at the statistics we can see that is not the case.</p>
+		</div> <!-- project -->
+
+		
+	</div>
+	<a href="projects.html" class="btn">More Projects</a>
+</section>
+
+<!-- About Me -->
+
+<section class="aboutme" id="about">
+	<h2 class="section__title section__title--about">About Me</h2>
+	<p class="section__subtitle section__subtitle--about">Massachusetts Developer</p>
+	
+	<div class="aboutme__body">
+		<p>
+			Hi, my name is Tyler. I am a senior currently double majoring in Computer Science and Computer Information Technology and Security at Elms College looking to start my career in Software Development and Engineering. I am a highly self motivated student and I am always working on a new project in addition to my coursework to improve my skills as a Software Developer. My current projects are two video games I am developing alongside my friends that are already in the industry mainly utilizing C++. As these projects get completed they will be available for review on my GitHub and my Projects page.
+		</p>
+
+		<p>
+			Outside of Software Development I play video games competitively when I have free time from school and work. Currently I mainly play Warzone and Smite. I was a Top 50 ranked player in PubG Month 3 and a Top 1% ranked Fortnite player in season 6. Game Development is also an area I have an interest in which is why I am undertaking projects alongside friends from the industry. They have been a tremendous help in improving and developing new skills for Software Development. I hope to become a knowledgeable and strong Software Developer in the industry.  
+		</p>
+
+	</div>
+
+	<img class="aboutme_img" src="images/kitty.jpg" alt="Picture of a cat">
+</section>
+
+
+
+	<script src="index.js"></script>
+
+	<!-- footer -->
+	<footer class="footer">
+		
+		<ul class="sociallist">
+			<li class="sociallist__item"><a href="Contact.html" class="footer__link">Designed by Tyler Cromack</a></li>
+			<li class="sociallist__item"><a class="sociallist__link" href="https://www.linkedin.com/in/tylercromack" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+			<li class="sociallist__item"><a class="sociallist__link" href="https://github.com/TCromack" target="_blank" rel="noopener"><i class="fab fa-github-square"></i></a></li>
+		</ul>
+	</footer>
+</body>
+
+</html>
