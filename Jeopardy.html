@@ -2,11 +2,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Tyler Cromack | Projects </title>
+  <title>Tyler Cromack | Jeopardy Bot </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Tyler Cromack's Personal Website"/>
-  <meta name="keyword" content="Tyler, Cromack, Software, Developer, Engineer, Chicopee, Springfield, Massachusetts, NHL, NFL, Portfolio, Projects, Fantasy Football, Computer Components, Rainfall"/>
+  <meta name="keyword" content="Tyler, Cromack, Software, Developer, Engineer, Chicopee, Springfield, Massachusetts, Portfolio, Projects, JeopardyBot"/>
   <link rel="stylesheet" href= "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
   <link href="csstemplate.css" rel="stylesheet">
@@ -14,14 +14,14 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Source+Code+Pro:400,900|Source+Sans+Pro:300,900|Open+Sans|Roboto&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous"/>
+  <script src="syntaxhighlighter.js" type="text/Javascript" ></script>
 </head>
-
-<body class ="main-content--body">
+<body class ="Project--body">
 
 <!-- Main Nav -->
 <header>
 	<div class="container">
-		<h1 class="logo"><img class="header__logo" src="images/TylerLogoALTShadow.png" alt="Tyler Cromack Logo"></h1>
+	<h1 class="logo"><img class="header__logo" src="images/TylerLogoALTShadow.png" alt="Tyler Cromack Logo"></h1>
 	<button class="menu-toggle" role="button">
         <div class="hamburger"></div>
       </button>
@@ -45,63 +45,43 @@
 	<li class="side__item"></li><a class="side__link" id="email" href="Contact.html"><i class="fas fa-envelope"></i></a></li>
   </div>
 
-<!-- Projects -->
+<!-- Project -->
 
-<div class="main-content">
-	<h2 class="project__header"><strong>PROJECTS</strong></h2>
-	<div class="portfolio" >
-		
-	  <div class="portfolio-item medium nhl" id="clickable">
-		<a href="NHL.html"></a>
-			<div class="project__Title">NHL Stats Analysis</div>
-			<div class="project__Description">A look at NHL player tendencies</div>
-		
-		</div>
+<div class="Title-card" id="jeopardy">
 	
-	  <div class="portfolio-item large football" id="clickable">
-		<a href="NFL.html"></a>
-		<div class="project__Title">Fantasy Football Web Application</div>
-		<div class="project__Description">A web database of fantasy football stats</div>
-	  </div>
-	  
-	  <div class="portfolio-item medium rain" id="clickable">
-		<a href="RainFall.html"></a>
-		<div class="project__Title">Rainfall Plot</div>
-		<div class="project__Description">Plotting monthly rainfall averages</div>
-	  </div>
-	  
-	  <div class="portfolio-item small github" id="clickable">
-		<a href="https://github.com/TCromack" target="_blank" rel="noopener"></a>
-		<div class="project__Title">GitHub</div>
-		<div class="project__Description">Check out my code</div>
-	  </div>
-	  <!--
-	  <div class="portfolio-item tall spellcheck" id="clickable">
-		<a href="SpellCheck.html"></a>
-		<div class="project__Title">Spell Checker</div>
-		<div class="project__Description">Checks text for misspelled words</div>
-	  </div>
-	  //-->
-	  <div class="portfolio-item tall jeopardybot" id="clickable">
-		<a href="Jeopardy.html"></a>
-		<div class="project__Title">Jeopardy Bot</div>
-		<div class="project__Description">A Discord bot that plays Jeopardy</div>
-	  </div>
-	  
-	  <div class="portfolio-item wide computer" id="clickable">
-		<a href="ComputerComponents.html"></a>
-		<div class="project__Title">Computer Components Website</div>
-		<div class="project__Description">A mock website for a computer parts store</div>
-	  </div>
-
-	</div>
-  </div>
+	
+	<h1 class="card-title">Jeopardy Bot</h1>
+	<p class="card-subtitle">A Discord bot that plays Jeopardy</p>
+		
 </div>
+
+<div class="Project-card">
+	
+	<div class="flexed"><h1 class="Project-title">About this project</h1><a href="https://github.com/TCromack/JeopardyBot" class="btn" target="_blank" rel="noopener">View Project</a></div>
+	<hr class="hrDiv--black"></hr>
+	<p class="Project-content"><p class="Project-Desc">This project was my senior Computer Science Capstone project. I chose this project because I wanted learn Javascript and how to work with Asynchronous and Synchronous data. I created a command to allow the user to request a question from the bot. Once requested the bot needed to wait on calls to the jService API in order to pull down the data needed to display Jeopardy questions in a Discord server. Doing this Synchronously would mean the bot would be unable to perform any other function while waiting for the data so using a promise to make the call to the API Asynchronous allows the bot to be able to still respond with help if a user requests help.</p>
+	<p class="Project-Desc">Once I was able to get the question and its corresponding properites from jService I needed to keep track of the users point value from answering questions correctly and incorrectly. To accomplish this I used SQLite to create a Table for the Discord Servers users that stores their current point total once they have responded to a question. This allowed me to be able to add a command that lets a user retrive their current point total from the table as well as a point leaderboard command for that discord server. This was a fun project that added new skills that I can use on future projects.
+		<img class="jeopardy" src="images/JeopardyExample.PNG" alt="" id="jeo">
+
+	</p>
+	
+</div>
+
+
+<aside class="Tech" id="jeoSide">
+	<h1 class="Tech-title">Technology</h1>
+	<hr></hr>
+	<p class="Tech-list">Javascript</p>
+	<p class="Tech-list">SQLite</p>
+	<p class="Tech-list">jService</p>
+	<p class="Tech-list">Discord.js</p>
+</aside>
+  
 
 	<script src="index.js"></script>
 
-	<!-- footer -->
-	<footer class="footer" id="projectFooter">
+<!-- footer -->
+	<footer class="footer">
 		
 		<ul class="sociallist">
 			<li class="sociallist__item"><a href="Contact.html" class="footer__link">Designed by Tyler Cromack</a></li>

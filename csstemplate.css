@@ -803,6 +803,10 @@ header{
 	background-image: url(https://images.pexels.com/photos/278887/pexels-photo-278887.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
 }
 
+.jeopardybot{
+	background-image: url(https://images.pexels.com/photos/356079/pexels-photo-356079.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+}
+
 .computer{
 	background-image: url(https://images.pexels.com/photos/4316/technology-computer-chips-gigabyte.jpg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
 }
@@ -1075,6 +1079,12 @@ header{
 	
 }
 
+#jeoSide{
+	
+	max-height: 370px;
+	
+}
+
 .card-title,.card-subtitle{
 	font-size: 2em;
 }
@@ -1085,6 +1095,14 @@ header{
 
 .graph{
 	justify-content: center;
+}
+
+#jeo{
+	margin-top: 1em;
+	margin-left: auto;
+	margin-right: auto;
+	width: 55%;
+	border-radius: 18px;
 }
 
 @media screen and (max-width: 1000px){
@@ -1141,6 +1159,14 @@ header{
 	background-size: cover;
 	background-blend-mode: soft-light;
 }
+
+#jeopardy{
+	background-image: url(https://images.pexels.com/photos/356079/pexels-photo-356079.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+	background-position: center;
+	background-size: cover;
+	background-blend-mode: soft-light;
+}
+
 
 
 
